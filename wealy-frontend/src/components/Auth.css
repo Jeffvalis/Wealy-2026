@@ -1,0 +1,240 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg-light);
+}
+
+/* Left Hero Section */
+.auth-hero {
+  flex: 1;
+  background-color: #121e31; /* Deep navy */
+  /* If you have a building texture, you'd add it here as background-image */
+  background-image: linear-gradient(135deg, rgba(14,24,41,0.9) 0%, rgba(20,35,60,0.9) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8rem;
+  font-style: italic;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+.hero-title i {
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+.security-badges {
+  display: flex;
+  gap: 3rem;
+  margin-top: auto;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.badge-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.badge-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Right Auth Panel */
+.auth-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-header {
+  margin-bottom: 2.5rem;
+}
+.auth-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.auth-header p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.sso-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.btn-sso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.btn-sso:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.sso-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--color-text-muted);
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--color-border);
+}
+.divider span {
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-link {
+  font-size: 0.75rem;
+  color: #927218; /* Gold tint */
+  font-weight: 500;
+}
+
+input {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-light);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+input:focus {
+  border-color: var(--color-text-muted);
+  background-color: #ffffff;
+}
+
+.btn-large {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.auth-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.signup-prompt {
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+}
+.signup-prompt a {
+  font-weight: 600;
+  color: inherit;
+  border-bottom: 1px solid var(--color-text-main);
+}
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.legal-links a {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .auth-hero {
+    display: none;
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wealy - Asset Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#d7e2ff",
+                        "on-primary-container": "#79849d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline-variant": "#c4c6cc",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#785a1a",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#b0f0d6",
+                        "background": "#f8f9fa",
+                        "tertiary-container": "#002117",
+                        "secondary": "#775a19",
+                        "on-background": "#191c1d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed-dim": "#bbc6e2",
+                        "on-tertiary-container": "#528f79",
+                        "on-surface-variant": "#44474c",
+                        "secondary-container": "#fed488",
+                        "primary": "#000000",
+                        "on-secondary-fixed": "#261900",
+                        "secondary-fixed-dim": "#e9c176",
+                        "tertiary-fixed-dim": "#95d3ba",
+                        "surface-dim": "#d9dadb",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary": "#000000",
+                        "inverse-surface": "#2e3132",
+                        "secondary-fixed": "#ffdea5",
+                        "error": "#ba1a1a",
+                        "outline": "#74777d",
+                        "primary-container": "#101b30",
+                        "surface-tint": "#545e76",
+                        "on-tertiary-fixed": "#002117",
+                        "on-primary-fixed": "#101b30",
+                        "on-tertiary-fixed-variant": "#0b513d",
+                        "on-surface": "#191c1d"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .gradient-button {
+            background: linear-gradient(135deg, #000000 0%, #101b30 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface-variant overflow-hidden">
+<!-- Backdrop / Modal Overlay -->
+<div class="fixed inset-0 bg-on-background/10 backdrop-blur-sm z-[60] flex items-center justify-center p-4 md:p-8">
+<!-- Modal Container -->
+<div class="bg-surface-container-lowest w-full max-w-5xl h-[921px] md:h-auto overflow-hidden rounded-full shadow-2xl flex flex-col relative">
+<!-- Top Bar / Header -->
+<div class="glass-header flex justify-between items-center px-8 py-6 sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center overflow-hidden">
+<img class="w-8 h-8 object-contain" data-alt="Vanguard S&amp;P 500 ETF Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHjfSAdyfWgg18KDVvQ6-ThiJkYchpsXPxnSjJ06DmCm2ZPpYhIcf_MRvVbwHxG6LEW_QK2TPlWhnZkSQeqrP_mkrTLLMQq9jmM1oyXdfxYTK2faXRajN3mCDnhzgQwFMZX-dsVsN0o7ItL1YR6Ghk10A07cXxXhiWZA4n8lUfM8uJKd8vQT1gG6wWpH4P8e-3GdIbbF9kjz8C8PERvCJ6Gjtf87L24VmJ4YZzcThmlNtK2KvgRwfXe4Lr-XCOBDSGvlT9jVfWaiEj"/>
+</div>
+<div>
+<h1 class="font-headline text-2xl font-bold tracking-tight text-on-surface">S&amp;P 500 ETF - VOO</h1>
+<p class="font-label text-sm text-on-surface-variant">Vanguard Index Funds • Equity • NYSE Arca</p>
+</div>
+</div>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto px-8 py-4 space-y-12">
+<!-- Hero Section: Value & Sparkline -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-4 space-y-2">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Current Price</span>
+<div class="flex items-baseline gap-2">
+<h2 class="font-headline text-5xl font-bold text-on-surface">$468.21</h2>
+<span class="font-label text-lg font-medium text-tertiary-fixed-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+                                +1.24%
+                            </span>
+</div>
+<p class="text-xs text-on-surface-variant">Last updated 2 mins ago • Market Open</p>
+</div>
+<!-- Performance Chart Placeholder -->
+<div class="lg:col-span-8 h-48 relative">
+<div class="absolute inset-0 flex items-end justify-between px-2">
+<!-- Simulated Premium Sparkline -->
+<div class="w-full h-full border-b border-outline-variant/20 flex items-end gap-[2px]">
+<div class="bg-tertiary-fixed-dim/20 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/30 w-full h-[45%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/40 w-full h-[55%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/50 w-full h-[52%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/60 w-full h-[65%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/70 w-full h-[75%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed-dim/80 w-full h-[70%] rounded-t-sm"></div>
+<div class="bg-tertiary-fixed w-full h-[85%] rounded-t-sm shadow-[0_-4px_12px_rgba(149,211,186,0.3)]"></div>
+</div>
+</div>
+<div class="absolute top-0 right-0 flex gap-2">
+<button class="px-3 py-1 rounded-lg bg-surface-container-high text-xs font-medium">1D</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-low text-xs font-medium transition-colors">1W</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-low text-xs font-medium transition-colors">1M</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-low text-xs font-medium transition-colors">1Y</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-low text-xs font-medium transition-colors">ALL</button>
+</div>
+</div>
+</div>
+<!-- Key Metrics Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-6 bg-surface-container-low rounded-full space-y-1">
+<p class="font-label text-xs text-on-surface-variant">Market Cap</p>
+<p class="font-headline text-xl font-semibold text-on-surface">$1.04T</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-full space-y-1">
+<p class="font-label text-xs text-on-surface-variant">Expense Ratio</p>
+<p class="font-headline text-xl font-semibold text-on-surface">0.03%</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-full space-y-1">
+<p class="font-label text-xs text-on-surface-variant">PE Ratio</p>
+<p class="font-headline text-xl font-semibold text-on-surface">24.52</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-full space-y-1">
+<p class="font-label text-xs text-on-surface-variant">Div. Yield</p>
+<p class="font-headline text-xl font-semibold text-on-surface">1.48%</p>
+</div>
+</div>
+<!-- Descriptive Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-7 space-y-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">About the Asset</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                            Vanguard S&amp;P 500 ETF (VOO) is an exchange-traded fund that tracks the performance of the S&amp;P 500 Index, which measures the investment return of large-capitalization stocks. VOO provides low-cost exposure to the 500 largest U.S. companies across diverse industries. It is managed by Vanguard, one of the world's largest investment management companies.
+                        </p>
+</div>
+<div class="lg:col-span-5 space-y-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">Your Position</h3>
+<div class="bg-surface-container-low rounded-full p-6 flex justify-between items-center">
+<div>
+<p class="font-label text-xs text-on-surface-variant">Holdings</p>
+<p class="font-headline text-lg font-bold text-on-surface">24.50 Units</p>
+</div>
+<div class="text-right">
+<p class="font-label text-xs text-on-surface-variant">Total Value</p>
+<p class="font-headline text-lg font-bold text-on-surface">$11,471.14</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex flex-col md:flex-row gap-4 pt-8 pb-4">
+<button class="flex-1 py-4 px-8 rounded-full font-label font-semibold text-on-primary gradient-button transition-transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                        Buy VOO
+                    </button>
+<button class="flex-1 py-4 px-8 rounded-full font-label font-semibold text-on-surface border border-outline-variant/20 hover:bg-surface-container-low transition-colors active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">sell</span>
+                        Sell Position
+                    </button>
+<button class="p-4 rounded-full border border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Content Mock (Unified Dashboard) -->
+<div class="p-8 space-y-12 blur-sm pointer-events-none">
+<header class="flex justify-between items-center">
+<h1 class="text-4xl font-headline font-bold">Private Office</h1>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200"></div>
+<div class="w-10 h-10 rounded-full bg-slate-200"></div>
+</div>
+</header>
+<div class="grid grid-cols-3 gap-8">
+<div class="h-40 bg-white rounded-full"></div>
+<div class="h-40 bg-white rounded-full"></div>
+<div class="h-40 bg-white rounded-full"></div>
+</div>
+<div class="h-96 bg-white rounded-full w-full"></div>
+</div>
+</body></html>

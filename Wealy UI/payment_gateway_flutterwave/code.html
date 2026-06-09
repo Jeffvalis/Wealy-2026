@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d7e2ff",
+              "on-primary-container": "#79849d",
+              "inverse-on-surface": "#f0f1f2",
+              "outline-variant": "#c4c6cc",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#785a1a",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#b0f0d6",
+              "background": "#f8f9fa",
+              "tertiary-container": "#002117",
+              "secondary": "#775a19",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "primary-fixed-dim": "#bbc6e2",
+              "on-tertiary-container": "#528f79",
+              "on-surface-variant": "#44474c",
+              "secondary-container": "#fed488",
+              "primary": "#000000",
+              "on-secondary-fixed": "#261900",
+              "secondary-fixed-dim": "#e9c176",
+              "tertiary-fixed-dim": "#95d3ba",
+              "surface-dim": "#d9dadb",
+              "surface-variant": "#e1e3e4",
+              "surface-bright": "#f8f9fa",
+              "tertiary": "#000000",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffdea5",
+              "error": "#ba1a1a",
+              "outline": "#74777d",
+              "primary-container": "#101b30",
+              "surface-tint": "#545e76",
+              "on-tertiary-fixed": "#002117",
+              "on-primary-fixed": "#101b30",
+              "on-tertiary-fixed-variant": "#0b513d",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Noto Serif', serif; }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #000000 0%, #101b30 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation (Shared Component) -->
+<header class="bg-white/80 backdrop-blur-xl shadow-sm fixed top-0 z-50 flex justify-between items-center w-full px-8 py-4">
+<div class="text-2xl font-serif italic text-slate-900">Wealy</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Marketplace</a>
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Insights</a>
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User profile avatar" data-alt="Close up professional portrait of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvAbKHyPjVYOznt1NIn2JByefhNuwhAkvG90T0Vjx5-4ojJSIXapovEZNs4bp8-t-3qHMQX4BA0pKeQLA6mhbAzmelfkiOsOvPlsCgIMBZh__Qao7OYszszVPAjIyXI5LUaukgWK5CdAotJzGw-LzXY8Ab2tmB6wwGcexntfSeS0rPt-dHXz9WnnwoQVSYDMMnEFmLrRDD81eWeUB2RFM9DzB_r60wRKPkWTnHBnHRcl_a3F_RqYOXeiU898k9hnI7lRMFoXj6Ru55"/>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-12 px-6 flex items-center justify-center">
+<!-- Secure Checkout Container -->
+<div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+<!-- Left: Order Summary (Asymmetric Layout) -->
+<div class="md:col-span-2 space-y-8">
+<div>
+<h1 class="text-4xl font-headline mb-2">Finalize Portfolio Funding</h1>
+<p class="text-on-surface-variant text-lg">Secure transaction powered by Flutterwave.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-label text-on-surface-variant uppercase tracking-wider">Asset Class</p>
+<p class="text-xl font-headline">Private Equity Fund II</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="shield_with_heart" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="border-t border-outline-variant/15 pt-4">
+<div class="flex justify-between mb-2">
+<span class="text-on-surface-variant">Investment Amount</span>
+<span class="font-semibold">$50,000.00</span>
+</div>
+<div class="flex justify-between mb-4">
+<span class="text-on-surface-variant">Processing Fee (0.5%)</span>
+<span class="font-semibold">$250.00</span>
+</div>
+<div class="flex justify-between items-baseline pt-4 border-t border-outline-variant/15">
+<span class="font-headline text-lg">Total Due</span>
+<span class="text-3xl font-headline text-primary">$50,250.00</span>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex flex-wrap gap-4 items-center opacity-70">
+<img alt="Visa Logo" class="h-8 w-auto grayscale" data-alt="Visa payment provider logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCikTyy5A_1R-rVfAtZBc78QusXGzSzmr49Au8WkP2VR7mPX-667QPvslfhzTrcq6vlMAZ4m83PySqGVewWPbkNJ62C_-dpvM7BJTjngpb6q1VCIkOyRhWpxID2bNZyKXwIERRtz5q-evtabFGcRVdtA67nWGaKFwMEPiDEiwE4LYxsoK68z8BhBVYiTpbZYyARh_7gBK6Wapvmxdg71xUVLa9q7Evh-FGfCrQiq_Q56LX4bF3c87ylTGpsLtvKdAUy3AxJO5QqOzCM"/>
+<img alt="Mastercard Logo" class="h-6 w-auto grayscale" data-alt="Mastercard payment provider logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPzQgGhdaPtxA_WBAkfHwcFi0ryS8ZM0jQxVlHSkf_keNa09shMa0FbmzfH4wPVPeY4nGUu2vWrU68uKZSPeW2fBakarV2LYOvYb5pK84UxJHxf5nN5xukVVGZCSHSoSHZ2pITjSn7aKTJ1SPDab-1Q7sWUAMkog84-BKYWQe6bIWuoy0Ucltpjz2J5-L6e9Q0YMaKCibnLKZ3Cj5046f_66c-E5cR_ixD9KUEGz260Ik5Mpeg3JDf1Z2LFN1XYmIv8BE12-LSnFRb"/>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-2 text-xs font-label">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>AES-256 ENCRYPTED</span>
+</div>
+</div>
+</div>
+<!-- Right: Payment Gateway Shell -->
+<div class="md:col-span-3 bg-surface-container-lowest rounded-xl shadow-lg overflow-hidden flex flex-col min-h-[500px]">
+<!-- Gateway Header -->
+<div class="p-6 bg-surface-container-high/50 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="bg-white p-2 rounded-lg shadow-sm">
+<img alt="Flutterwave Logo" class="h-5" data-alt="Official Flutterwave branding logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0n3X5TWYZPH4GOcfPOCpSZsToBlaXjp04YeeXzvYSxe1iU0s8vcDODNZ73n1j6KsQPqlFl94Ne1gGtU1vXBEEMER8umH9FM-9Qx6G4BOEPAgUNayy91K8_3NNo7tpkC70IHxWIVPlSDyzLrW2umPTi8I5PkDGKawWAJRmMuCCCEhkXBZm0xyilF4JNVr9MuNT9O_ja1j2OhXFljHT4bH_uhPmWLH-OwE6Jd2TYvQt5QRS-gB6SfMNJhXbrKiCh8_86HgPBJwS5gIb"/>
+</div>
+<span class="text-xs font-label text-on-surface-variant">SECURE CHECKOUT</span>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Transaction Ref</p>
+<p class="text-xs font-mono">WLY-FW-992104</p>
+</div>
+</div>
+<!-- Payment Methods Toggle -->
+<div class="flex border-b border-outline-variant/15">
+<button class="flex-1 py-4 text-sm font-medium border-b-2 border-primary text-primary bg-surface-container-lowest">
+                        Virtual Account
+                    </button>
+<button class="flex-1 py-4 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors">
+                        Card Payment
+                    </button>
+<button class="flex-1 py-4 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors">
+                        Bank Transfer
+                    </button>
+</div>
+<!-- Payment Details Body -->
+<div class="p-8 flex-grow space-y-8">
+<div class="text-center space-y-2">
+<p class="text-on-surface-variant">Transfer the exact amount to the account below</p>
+<p class="text-2xl font-headline">$50,250.00</p>
+</div>
+<!-- Virtual Account Card -->
+<div class="bg-surface-container-low rounded-xl p-6 relative group border border-outline-variant/10">
+<div class="grid grid-cols-2 gap-y-6">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 font-bold">Bank Name</p>
+<p class="font-medium">Wema Bank / Flutterwave</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 font-bold">Account Name</p>
+<p class="font-medium text-sm">WEALY PREMIUM SVCS</p>
+</div>
+<div class="col-span-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 font-bold">Account Number</p>
+<div class="flex items-center justify-between bg-white px-4 py-3 rounded-lg border border-outline-variant/20">
+<span class="text-xl font-mono tracking-wider">7720 1194 02</span>
+<button class="flex items-center gap-1 text-secondary text-xs font-bold hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+                                        COPY
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-fixed/10 p-4 rounded-lg flex gap-3 items-start">
+<span class="material-symbols-outlined text-on-tertiary-container text-xl" data-icon="info">info</span>
+<p class="text-xs leading-relaxed text-on-tertiary-container">
+                            This virtual account expires in <span class="font-bold">29:55</span>. Please ensure the transfer is completed before the timer runs out to avoid delays in allocation.
+                        </p>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-8 pt-0 space-y-4">
+<button class="w-full primary-gradient text-on-primary py-4 rounded-xl font-semibold shadow-xl hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="verified_user">verified_user</span>
+                        Confirm Payment Sent
+                    </button>
+<button class="w-full py-3 text-on-surface-variant text-sm font-medium hover:text-primary transition-colors">
+                        Cancel Transaction
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Side Navigation (Suppressed for transactional focus as per rule) -->
+<!-- Bottom Bar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-2xl px-6 py-4 flex justify-around items-center z-50">
+<div class="flex flex-col items-center gap-1 text-slate-900">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] font-medium">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="currency_bitcoin">currency_bitcoin</span>
+<span class="text-[10px] font-medium">Crypto</span>
+</div>
+</div>
+<!-- Security Footer -->
+<footer class="py-8 px-6 text-center text-on-surface-variant/40 border-t border-outline-variant/10 mt-auto">
+<div class="flex justify-center items-center gap-6 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span class="text-[10px] uppercase tracking-widest">PCI-DSS Compliant</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="security">security</span>
+<span class="text-[10px] uppercase tracking-widest">ISO 27001 Certified</span>
+</div>
+</div>
+<p class="text-[10px] max-w-lg mx-auto leading-relaxed">
+            Wealy Private Office uses industry-leading encryption and partner-vetted gateways. Your financial data is never stored on our local servers. Payment processing is handled entirely by Flutterwave (license number RC 1323351).
+        </p>
+</footer>
+</body></html>

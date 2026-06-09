@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d7e2ff",
+              "on-primary-container": "#79849d",
+              "inverse-on-surface": "#f0f1f2",
+              "outline-variant": "#c4c6cc",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#785a1a",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#b0f0d6",
+              "background": "#f8f9fa",
+              "tertiary-container": "#002117",
+              "secondary": "#775a19",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "primary-fixed-dim": "#bbc6e2",
+              "on-tertiary-container": "#528f79",
+              "on-surface-variant": "#44474c",
+              "secondary-container": "#fed488",
+              "primary": "#000000",
+              "on-secondary-fixed": "#261900",
+              "secondary-fixed-dim": "#e9c176",
+              "tertiary-fixed-dim": "#95d3ba",
+              "surface-dim": "#d9dadb",
+              "surface-variant": "#e1e3e4",
+              "surface-bright": "#f8f9fa",
+              "tertiary": "#000000",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffdea5",
+              "error": "#ba1a1a",
+              "outline": "#74777d",
+              "primary-container": "#101b30",
+              "surface-tint": "#545e76",
+              "on-tertiary-fixed": "#002117",
+              "on-primary-fixed": "#101b30",
+              "on-tertiary-fixed-variant": "#0b513d",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #000000 0%, #101b30 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Auth Shell - Suppression of Global Nav per Filter Rule -->
+<main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Brand Visual Side (Split Screen) -->
+<section class="hidden md:flex md:w-1/2 relative flex-col justify-between p-12 overflow-hidden bg-primary-container">
+<!-- Background Image with Tonal Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Modern architectural skyscraper facade" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Modern architectural skyscraper facade reflecting clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTA9Fq3pKDZHDKxXV-T3tzMnBhwTIMu_z7chX0VkBFPwhI8nTCmB7f4DrKh0FisCoyUQ1GdMLHdVqoBb8D1HmozU27hMEkyJo4hCbNvvZ2F-ef5hGfdyLyJOCCPZ0s5Dc5XmmssCHtxZSAndc-4N6-tdo3MLRW8SQTIAi6R1Sy2rubrGbdpWYvn9pw4TP9tO5BbgeZ8OsI9W_Y3GrXko3CYn_FRYA3Y0nG9I5Nq7tVA5lkPxL3DVBqbB-HAC2Fhk5LcgtEfZkIoN5B"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent"></div>
+</div>
+<!-- Brand Identity -->
+<div class="relative z-10">
+<h1 class="text-2xl font-serif italic text-white tracking-tight">Wealy</h1>
+</div>
+<!-- Inspiring Content -->
+<div class="relative z-10 max-w-lg">
+<h2 class="font-headline text-5xl leading-tight text-white mb-6">
+                    The architecture of your <span class="italic">digital legacy</span> starts here.
+                </h2>
+<p class="text-on-primary-container text-lg leading-relaxed max-w-md">
+                    Access your Private Office and manage global assets with the precision of high-end editorial banking.
+                </p>
+</div>
+<!-- Footer Trust Markers -->
+<div class="relative z-10 flex gap-8 items-center">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-on-primary-container mb-1">Security Standard</span>
+<span class="text-white font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        AES-256 Encrypted
+                    </span>
+</div>
+<div class="w-px h-8 bg-on-primary-container opacity-20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-on-primary-container mb-1">Global Access</span>
+<span class="text-white font-medium">Wealth Tier: Elite</span>
+</div>
+</div>
+</section>
+<!-- Authentication Form Side -->
+<section class="flex-1 flex items-center justify-center p-6 md:p-24 bg-surface">
+<div class="w-full max-w-md space-y-10">
+<!-- Header -->
+<header class="space-y-2">
+<div class="md:hidden mb-8">
+<h1 class="text-2xl font-serif italic text-primary tracking-tight">Wealy</h1>
+</div>
+<h3 class="font-headline text-3xl text-primary">Enter your office</h3>
+<p class="text-on-surface-variant">Sign in to manage your digital wealth portfolio.</p>
+</header>
+<!-- Social Logins (Clerk Integration Focus) -->
+<div class="space-y-4">
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl border border-outline-variant/10 group">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Google colorful G logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGFSsZneD-S7cwz_AWkFp332cl1Q1a5WembZBdulL2vfs1HiHIppSCekoau0O0UGUHHDjTPN93PkxCguOPFkC7yhne-eVZuDfJS2mxGBpOicmmYwBXk1RMAI5SheIEj7AQdJx0ya6lxus5K55jrQx56g9gaXY7L-5TCyVRLtcyB3QJpiQFp4FEDG8vzdfdHUnfBQJrPZ1aCJ6Anv5TJuiHjQi7lape-_R4t1YmJzTbpcOpQWCziNjNt2EuHxeB7sNSMfg6sFclxJmy"/>
+<span class="text-sm font-medium text-on-surface">Continue with Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl border border-outline-variant/10 group">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span class="text-sm font-medium text-on-surface">Continue with Apple</span>
+</button>
+<button class="flex items-center justify-center gap-3 w-full py-3.5 px-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl border border-outline-variant/10 group">
+<svg class="w-5 h-5" viewbox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h23v23H0z" fill="#f3f3f3"></path><path d="M1 1h10v10H1z" fill="#f35325"></path><path d="M12 1h10v10H12z" fill="#81bc06"></path><path d="M1 12h10v10H1z" fill="#05a6f0"></path><path d="M12 12h10v10H12z" fill="#ffba08"></path></svg>
+<span class="text-sm font-medium text-on-surface">Continue with Microsoft</span>
+</button>
+</div>
+<div class="relative py-4 flex items-center">
+<div class="flex-grow border-t border-outline-variant opacity-20"></div>
+<span class="flex-shrink mx-4 text-xs font-label uppercase tracking-widest text-outline">or via email</span>
+<div class="flex-grow border-t border-outline-variant opacity-20"></div>
+</div>
+</div>
+<!-- Traditional Credentials -->
+<form class="space-y-6">
+<div class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant ml-1" for="email">Work Email</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none px-4 py-4 rounded-xl text-on-surface focus:ring-0 focus:bg-surface-container-highest transition-all placeholder:text-outline" id="email" placeholder="name@company.com" type="email"/>
+<div class="absolute inset-0 border border-secondary opacity-0 group-focus-within:opacity-20 rounded-xl pointer-events-none"></div>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center ml-1">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant" for="password">Access Key</label>
+<a class="text-xs text-secondary font-medium hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none px-4 py-4 rounded-xl text-on-surface focus:ring-0 focus:bg-surface-container-highest transition-all placeholder:text-outline" id="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-0 border border-secondary opacity-0 group-focus-within:opacity-20 rounded-xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="primary-gradient w-full py-4 text-white font-medium rounded-full shadow-lg shadow-primary-container/20 hover:scale-[1.01] active:scale-[0.98] transition-all" type="submit">
+                            Enter Private Office
+                        </button>
+</div>
+</form>
+<!-- Footer Links -->
+<footer class="text-center space-y-6 pt-4">
+<p class="text-sm text-on-surface-variant">
+                        Don't have an invitation? <a class="text-primary font-semibold hover:underline" href="#">Request access</a>
+</p>
+<div class="flex justify-center gap-6">
+<a class="text-[11px] text-outline hover:text-on-surface uppercase tracking-widest transition-colors" href="#">Privacy Policy</a>
+<a class="text-[11px] text-outline hover:text-on-surface uppercase tracking-widest transition-colors" href="#">Security Disclosure</a>
+</div>
+</footer>
+</div>
+</section>
+</main>
+</body></html>

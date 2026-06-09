@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Identity Verification | Wealy Private Office</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d7e2ff",
+              "on-primary-container": "#79849d",
+              "inverse-on-surface": "#f0f1f2",
+              "outline-variant": "#c4c6cc",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#785a1a",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#b0f0d6",
+              "background": "#f8f9fa",
+              "tertiary-container": "#002117",
+              "secondary": "#775a19",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "primary-fixed-dim": "#bbc6e2",
+              "on-tertiary-container": "#528f79",
+              "on-surface-variant": "#44474c",
+              "secondary-container": "#fed488",
+              "primary": "#000000",
+              "on-secondary-fixed": "#261900",
+              "secondary-fixed-dim": "#e9c176",
+              "tertiary-fixed-dim": "#95d3ba",
+              "surface-dim": "#d9dadb",
+              "surface-variant": "#e1e3e4",
+              "surface-bright": "#f8f9fa",
+              "tertiary": "#000000",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffdea5",
+              "error": "#ba1a1a",
+              "outline": "#74777d",
+              "primary-container": "#101b30",
+              "surface-tint": "#545e76",
+              "on-tertiary-fixed": "#002117",
+              "on-primary-fixed": "#101b30",
+              "on-tertiary-fixed-variant": "#0b513d",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-white/80 backdrop-blur-xl text-slate-900 fixed top-0 z-50 flex justify-between items-center w-full px-8 py-4 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-serif italic text-slate-900">Wealy</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Marketplace</a>
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Insights</a>
+<a class="text-slate-500 hover:text-slate-700 transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User profile avatar" data-alt="Close up professional headshot of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcwTmlOZYmS1lpi8fSTi8u9gCUlXVxCSsV8i-jll73LAnECLZnKSlgzChM067DuIze6rBn-EloEOvWjkMtYKAi0LX_eUPaPjxNDQQLgEiLhd-TAKqEsCn_0gi1vkGtS9vIj-Vigwd-gab8kAxiBg7u1rpPJCboaAinfm78xKGsO387NCJLcGxg_NYhZ4a7obE4HwQUCeDa5F7oKX54lsrdzZLIQ4h2fSUogkEEvNy8gn0Z1Rl1hVnQPf2LE6NV7ohTjq9fWlk9fNlO"/>
+</div>
+</div>
+</header>
+<!-- Side Navigation Bar (Private Office Branding) -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-slate-50 p-6 gap-8 pt-24 z-40">
+<div class="space-y-1">
+<h2 class="font-serif text-xl tracking-tight text-slate-900">Private Office</h2>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest">Wealth Tier: Elite</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-sm font-medium">Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-sm font-medium">Transactions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-sm font-medium">Wallet</span>
+</a>
+<a class="bg-white text-slate-900 shadow-sm rounded-xl flex items-center gap-3 px-4 py-3" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="text-sm font-medium">Verification</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="currency_bitcoin">currency_bitcoin</span>
+<span class="text-sm font-medium">Crypto</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 space-y-4">
+<button class="w-full py-3 bg-primary-container text-white rounded-xl text-sm font-medium">Upgrade Plan</button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 text-sm hover:text-slate-900" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help_outline">help_outline</span>
+                    Help Center
+                </a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 text-sm hover:text-slate-900" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+                    Sign Out
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:pl-64 pt-24 min-h-screen">
+<div class="max-w-5xl mx-auto px-8 py-12">
+<!-- Header Section (Bento Style Intro) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<div class="lg:col-span-2 space-y-6">
+<h1 class="text-5xl md:text-6xl font-serif text-primary tracking-tight leading-tight">Secure Your <br/>Wealth Identity</h1>
+<p class="text-xl text-on-surface-variant max-w-xl font-sans">Verification is the cornerstone of our Private Office. By completing this step, you unlock global capital markets and institutional-grade security.</p>
+</div>
+<!-- Progress Card -->
+<div class="bg-surface-container-lowest p-8 rounded-full shadow-sm flex flex-col justify-between border border-outline-variant/10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-semibold uppercase tracking-widest text-secondary">Step 2 of 4</span>
+<span class="material-symbols-outlined text-secondary" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div class="space-y-4">
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full w-1/2 bg-secondary rounded-full"></div>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">Identity Assessment: <span class="text-on-surface">50% Complete</span></p>
+</div>
+</div>
+</div>
+<!-- Main Verification Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Interaction Zone -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-10 rounded-full shadow-sm border border-outline-variant/10">
+<div class="mb-10">
+<h3 class="text-2xl font-serif mb-2">Government Verification</h3>
+<p class="text-on-surface-variant text-sm">Please provide your Bank Verification Number (BVN). This ensures your account is linked to your legal identity for compliance.</p>
+</div>
+<form class="space-y-8">
+<div class="space-y-3">
+<label class="block text-sm font-semibold text-on-surface uppercase tracking-wide" for="bvn">BVN Number</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-0 rounded-full px-6 py-4 focus:ring-2 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all text-lg tracking-[0.2em] font-medium placeholder:tracking-normal placeholder:font-normal" id="bvn" placeholder="22XXXXXXXXX" type="text"/>
+<div class="absolute right-6 top-1/2 -translate-y-1/2 text-tertiary-fixed-dim hidden">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant/70 mt-2">
+<span class="material-symbols-outlined text-base" data-icon="info">info</span>
+<span>Dial *565*0# from your registered phone to find your BVN.</span>
+</div>
+</div>
+<div class="pt-4 flex flex-col md:flex-row items-center gap-4">
+<button class="w-full md:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-semibold shadow-lg hover:opacity-90 transition-all active:scale-95" type="submit">
+                                    Verify Identity
+                                </button>
+<button class="w-full md:w-auto px-10 py-4 text-on-surface font-semibold hover:underline" type="button">
+                                    I'll do this later
+                                </button>
+</div>
+</form>
+<!-- Status Indicator Patterns -->
+<div class="mt-12 pt-12 border-t border-outline-variant/10 grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center p-4 rounded-xl bg-tertiary-fixed/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-2" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-on-tertiary-fixed-variant">Success</span>
+</div>
+<div class="flex flex-col items-center p-4 rounded-xl bg-secondary-container/10 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="pending" style="font-variation-settings: 'FILL' 1;">pending</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-on-secondary-fixed-variant">Pending</span>
+</div>
+<div class="flex flex-col items-center p-4 rounded-xl bg-error-container/10">
+<span class="material-symbols-outlined text-error mb-2" data-icon="error" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-on-error-container">Failed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Information Zone (Asymmetric/Editorial) -->
+<div class="lg:col-span-5 flex flex-col gap-12 pt-4">
+<section class="space-y-6">
+<div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" data-icon="gpp_good">gpp_good</span>
+</div>
+<h4 class="text-2xl font-serif">Why verify?</h4>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="mt-1 shrink-0 w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<div>
+<p class="font-semibold text-on-surface">Institutional Access</p>
+<p class="text-sm text-on-surface-variant">Access higher transaction limits and exclusive investment vehicles reserved for verified members.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="mt-1 shrink-0 w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<div>
+<p class="font-semibold text-on-surface">Compliance &amp; Security</p>
+<p class="text-sm text-on-surface-variant">We adhere to global AML/KYC standards to keep your assets protected from unauthorized access.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="mt-1 shrink-0 w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<div>
+<p class="font-semibold text-on-surface">Privacy First</p>
+<p class="text-sm text-on-surface-variant">Your data is encrypted and used solely for identity verification through secure government channels.</p>
+</div>
+</li>
+</ul>
+</section>
+<!-- Trust Seal Card -->
+<div class="bg-surface-container-low p-8 rounded-full border border-outline-variant/20 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0">
+<img alt="Security seal pattern" data-alt="Abstract geometric navy blue and gold pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj0CC6lOLZQIys0ScrOLSMg7XLTJi046Igzw_hGKu98Bxag8LHnKDUT7bhgkxA4LDUoWr3RbLoHpSO6t8BLRbvRKbN2siGt_HGjW14rlB7hG7PPncC3AcKhe4iHcCzKS7yqXFLxj5zeCRKp8YhX2OZ83K9SLA1UPEb2aIaTnQiNLiHLYBgqgDQaDcCjfvYhlSWXSo19eT3Ttp5WwdGgyhzKp2Qdj3HrMhNus4VRxhCZBqrVrwDZ5loAL8eKXExJD-Mcc14Qbo_eLBK"/>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1">Encrypted Connection</p>
+<p class="text-sm font-serif italic">AES-256 Grade Security Protocol active for this session.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Compliance -->
+<footer class="mt-24 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex gap-4">
+<img alt="Regulatory logo" class="h-8 grayscale opacity-50" data-alt="Stock exchange and regulatory authority logos grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0R_4vls_Y9GtK9hPPeParwedLDUPjz6eW3nkGgtt1dp7aqIRNPwUWRDtox3sK_RBlm__2JKPQiB4gBEHeoEuvW1WGtJkq9Hb324gYtYejEK8p-36D_6vUpQ1noLi1ssXa-wO4tH4YOVsfJ65YvNS2lqKj9LQba768fM3-RbBELg_0BL272K81dYVM300LNjtYE3IdtnI6E1agdBWmLNMP_6AOS29GdnZ7akcnMto8TeKk5It2Km2yn64BQ94-7Lh41wHR5MBxq_AY"/>
+<img alt="Security certification" class="h-8 grayscale opacity-50" data-alt="Financial data security certification badges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQtgOJvp9emcgbjWK3XXjKbhJKsyWkf6eEPKBknXIJWEqHO7H3l9uH4VK6KbiF7kAlI6MgOM-hFAb2mfj1IOr_E_PewE5pf9oWAWSTkURqvxOmCMIFv4YSkYd2MnLvdOLv16cExlSMIdYJSJhj13YWSu6ifgpAcPwcmmPGb6e63-tUHU9jHTNOosOq8CZJdgA2rZEOWrfLkIA8HiPHzzfWjWuTvBo31dhlBcrLLn4JuYXP--ZsNvye86SqPa5_w5VlWN54SWcK3Qd"/>
+</div>
+<p class="text-[10px] font-medium text-on-surface-variant/60 text-center md:text-right uppercase tracking-[0.2em]">
+                    Wealy Wealth Management © 2024 • Registered Investment Advisor • Privacy Protected
+                </p>
+</footer>
+</div>
+</main>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-lg flex justify-around items-center py-4 px-2 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Portfolio</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-900 font-semibold border-b-2 border-slate-900 pb-1">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="text-[10px]">Verify</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

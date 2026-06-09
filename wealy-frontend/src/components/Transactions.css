@@ -1,0 +1,142 @@
+.transactions-container {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--slate-900);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  color: var(--slate-500);
+  font-size: 1.1rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: var(--slate-400);
+  gap: 1rem;
+}
+
+.empty-icon {
+  opacity: 0.5;
+}
+
+.tx-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tx-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--slate-200);
+  transition: background-color 0.2s;
+}
+
+.tx-row:last-child {
+  border-bottom: none;
+}
+
+.tx-row:hover {
+  background-color: var(--slate-50);
+}
+
+.tx-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tx-icon.positive {
+  background: var(--gold-light);
+  color: var(--gold-dark);
+}
+
+.tx-icon.negative {
+  background: var(--slate-100);
+  color: var(--slate-600);
+}
+
+.tx-details {
+  flex: 1;
+}
+
+.tx-details h4 {
+  color: var(--slate-900);
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+}
+
+.tx-details p {
+  color: var(--slate-500);
+  font-size: 0.875rem;
+  font-family: var(--font-mono);
+}
+
+.tx-status {
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badge-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--slate-100);
+  color: var(--slate-600);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tx-amount {
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 120px;
+  text-align: right;
+  letter-spacing: -0.01em;
+}
+
+.tx-amount.positive {
+  color: var(--gold-dark);
+}
+
+.tx-amount.negative {
+  color: var(--slate-900);
+}

@@ -1,0 +1,6 @@
+python-dotenv
+requests
+fastapi
+uvicorn
+supabase==2.14.0
+clerk-backend-api>=1.0.0

@@ -7,11 +7,10 @@ A premium, full-stack wealth management platform. Built with **React (Vite)** on
 ## 📁 Project Structure
 
 ```
-Jeffery/
+Wealy-2026/
 ├── wealy-backend/     → Python API server (FastAPI + Supabase + Flutterwave)
 ├── wealy-frontend/    → React UI (Vite + Vanilla CSS)
-├── Wealy UI/          → Original Figma design exports (PNG)
-└── master_roadmap.md  → Project planning notes
+└── Wealu UI/          → Original Figma design exports (PNG)
 ```
 
 ---

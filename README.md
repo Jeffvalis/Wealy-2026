@@ -1,4 +1,4 @@
-# 💰 The Wealy App
+# The Wealy App
 
 A premium, full-stack wealth management platform. Built with **React (Vite)** on the front end and **FastAPI (Python)** on the back end.
 

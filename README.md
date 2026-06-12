@@ -30,7 +30,7 @@ flowchart TD
     EVENT --> LEDGER["Ledger & Portfolio Core Service<br>(Supabase / PostgreSQL)"]
     
     classDef default fill:#1A1A1A,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5,color:#FFFFFF;
-    class EVENT fill:none,stroke:none,color:#FFFFFF;
+    style EVENT fill:none,stroke:none,color:#FFFFFF
 ```
 
 ---

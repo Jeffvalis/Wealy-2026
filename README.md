@@ -1,6 +1,37 @@
-# The Wealy App
+# 💰 The Wealy App
 
-A premium, full-stack wealth management platform. Built with **React (Vite)** on the front end and **FastAPI (Python)** on the back end.
+A premium, full-stack wealth management platform designed to automate identity verification, fiat deposits via virtual accounts, and global market investments for retail users in Nigeria (NGN base currency). Built with **React (Vite)** on the front end and **FastAPI (Python)** on the back end.
+
+---
+
+## 🏗️ System Architecture
+
+The system acts as a consolidated orchestrator connecting various API providers into a single streamlined pipeline: Authentication -> KYC Registration -> Wallet Generation -> Real-time Ledger Management -> Asset Purchases.
+
+```mermaid
+flowchart TD
+    API["API GATEWAY / ORCHESTRATOR (FastAPI)"]
+    
+    ID["Identity & Auth Service<br>(Clerk)"]
+    KYC["KYC & Compliance<br>(Paystack)"]
+    PAY["Payment & Vault<br>(Flutterwave)"]
+    MKT["Market Data<br>(Alpha Vantage)"]
+    
+    API --> ID
+    API --> KYC
+    API --> PAY
+    API --> MKT
+    
+    ID -.-> EVENT{"(Async Events & Webhooks:<br>e.g., loan.disbursed / transfer.completed)"}
+    KYC -.-> EVENT
+    PAY -.-> EVENT
+    MKT -.-> EVENT
+    
+    EVENT --> LEDGER["Ledger & Portfolio Core Service<br>(Supabase / PostgreSQL)"]
+    
+    classDef default fill:#1A1A1A,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5,color:#FFFFFF;
+    class EVENT fill:none,stroke:none,color:#FFFFFF;
+```
 
 ---
 
@@ -10,8 +41,22 @@ A premium, full-stack wealth management platform. Built with **React (Vite)** on
 Wealy-2026/
 ├── wealy-backend/     → Python API server (FastAPI + Supabase + Flutterwave)
 ├── wealy-frontend/    → React UI (Vite + Vanilla CSS)
-└── Wealu UI/          → Original Figma design exports (PNG)
+├── Wealy UI/          → Original Figma design exports (PNG)
+├── TRD.md             → Technical Requirements Document
+└── master_roadmap.md  → Project planning notes
 ```
+
+---
+
+## 🔑 How the Product Works (End-to-End User Flow)
+
+Wealy abstracts the complexity of financial compliance and orchestration through a strict sequential journey:
+
+1. **Gate 1 (Auth):** User attempts logging in via the `/auth/login` endpoint using Clerk's backend SDK. 
+2. **Gate 2 (Identity & KYC):** The application queries profiles in Supabase. If missing, it prompts the user to enter their BVN (Bank Verification Number) to hit Paystack's endpoint. Unverified users (Tier 1) have strict limits, while verified users (Tier 2) unlock full features.
+3. **Gate 3 (Vault Generation):** Successful KYC causes Wealy to request a Flutterwave virtual account, logging the `account_number` into the verified profile. This provides a permanent NGN virtual account for the user.
+4. **Gate 4 (Funding & Ledger):** User sends money natively to their dedicated virtual account. The Flutterwave backend detects it and sends a webhook to Wealy. A continuous polling ledger calculates the user's balance dynamically by summing all successful `DEPOSIT` and `WITHDRAWAL` transactions, preventing double-debits via an idempotency shield.
+5. **Gate 5 (Investing):** User clicks "Buy APPL". The backend pulls the live price from Alpha Vantage, checks if the fiat balance covers the USD/NGN converted price, and executes the trade. It writes a `DEBIT` for fiat and an `INVESTMENT` record in the portfolio table.
 
 ---
 
@@ -29,7 +74,7 @@ Make sure you have the following installed before you begin:
 
 ## 🖥️ Running the Backend (`wealy-backend`)
 
-The backend is a **FastAPI** server that connects to Clerk, Supabase, Paystack, and Flutterwave.
+The backend is a **FastAPI** server that connects to Clerk, Supabase, Paystack, Flutterwave, and Alpha Vantage.
 
 ### Step 1 — Install Python dependencies
 
@@ -102,15 +147,6 @@ You need **two terminals open at the same time**:
 | **Terminal 2 (Frontend)** | `cd wealy-frontend && npm run dev` | `http://localhost:5173` |
 
 Then open your browser and go to **`http://localhost:5173`**.
-
----
-
-## 🔑 User Flow (How it works)
-
-1. **Login** → `/auth` — Enter your Clerk email + password to authenticate
-2. **KYC Verification** → `/verification` — Enter your 11-digit BVN to unlock full access
-3. **Dashboard** → `/` — View your total AUM, portfolio, and market overview
-4. **Wallet** → `/wallet` — Deposit funds via Flutterwave or view your virtual account number
 
 ---
 
